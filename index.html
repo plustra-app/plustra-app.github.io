@@ -4,32 +4,131 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plustra — BIG3のための筋トレ記録アプリ</title>
+<meta name="description" content="記録すると、次のセットで挙げる重量をアプリが決めます。BIG3の伸びが一本の線で見える、余計な機能のない筋トレ記録アプリ。記録画面に広告は出しません。">
+<meta property="og:title" content="Plustra — 次に挙げる重量が決まる">
+<meta property="og:description" content="記録すると、次のセットで挙げる重量をアプリが決めます。BIG3のための筋トレ記録アプリ。">
+<meta property="og:type" content="website">
 <style>
-  :root { color-scheme: light dark; }
-  body { margin: 0; padding: 48px 16px 64px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.8; color: #111; background: #fff; }
-  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #0b0d10; } a { color: #9fd356; } .mark { color: #d2ff3b; } }
-  main { max-width: 36rem; margin: 0 auto; }
-  h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: .02em; }
-  .mark { color: #4a8f1f; }
-  .lead { color: #555; margin: 0 0 32px; }
-  @media (prefers-color-scheme: dark) { .lead { color: #9aa0a6; } }
-  ul { padding-left: 1.2em; }
-  a { color: #3a7d1f; }
-  footer { margin-top: 48px; color: #777; font-size: .9rem; }
+  :root {
+    color-scheme: dark;
+    --bg: #0a0c10;
+    --surface: #14171d;
+    --text: #f2f4f6;
+    --muted: #9aa0a6;
+    --accent: #d2ff3b;
+    --accent-ink: #0b0d06;
+    --border: #262b33;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 56rem; margin: 0 auto; padding: 0 20px; }
+  header { padding: 72px 0 40px; text-align: center; }
+  .mark { font-size: 2.8rem; font-weight: 800; letter-spacing: .01em; margin: 0; }
+  .mark span { color: var(--accent); }
+  .tag { color: var(--accent); font-size: .85rem; letter-spacing: .14em; margin: 8px 0 0; }
+  .lead { font-size: 1.35rem; font-weight: 700; margin: 28px 0 8px; line-height: 1.6; }
+  .sub { color: var(--muted); margin: 0 auto; max-width: 34rem; }
+  .cta { display: inline-block; margin-top: 28px; background: var(--accent); color: var(--accent-ink);
+         font-weight: 800; text-decoration: none; padding: 14px 32px; border-radius: 999px; }
+  .cta.soon { background: var(--surface); color: var(--muted); border: 1px solid var(--border); font-weight: 600; }
+  section { padding: 44px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.25rem; margin: 0 0 20px; }
+  .feature { display: grid; gap: 4px; margin-bottom: 26px; }
+  .feature b { font-size: 1.02rem; }
+  .feature span { color: var(--muted); font-size: .95rem; }
+  .shots { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 auto; width: 215px; scroll-snap-align: center; }
+  .shots img { width: 100%; border-radius: 18px; border: 1px solid var(--border); display: block; }
+  .shots figcaption { color: var(--muted); font-size: .85rem; margin-top: 10px; text-align: center; }
+  .price { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+  .price h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .price p { margin: 0 0 14px; color: var(--muted); font-size: .95rem; }
+  ul { padding-left: 1.2em; margin: 0; }
+  li { color: var(--muted); }
+  footer { padding: 40px 0 64px; color: var(--muted); font-size: .9rem; text-align: center; }
+  a { color: var(--accent); }
+  @media (max-width: 480px) { .mark { font-size: 2.2rem; } .lead { font-size: 1.15rem; } }
 </style>
 </head>
 <body>
-<main>
-  <h1>Plustra<span class="mark">+</span></h1>
-  <p class="lead">BIG3 のための筋トレ記録アプリ。次に挙げる重量を決めるための道具です。</p>
+<div class="wrap">
 
-  <ul>
-    <li>記録した内容から、次回の重量を自動で提案（ダブルプログレッション）</li>
-    <li>曜日ごとのメニューと、その日だけの予定編集</li>
-    <li>休憩タイマー（ロック中も通知、音楽は止めません）</li>
-    <li>BIG3 合計・推移・自己ベストの振り返り</li>
-    <li>記録画面に広告は出しません。データは端末の中だけで扱います</li>
-  </ul>
+  <header>
+    <p class="mark">Plustra<span>+</span></p>
+    <p class="tag">LIMITS ARE MADE TO BE BROKEN.</p>
+    <p class="lead">次に挙げる重量を、アプリが決める。</p>
+    <p class="sub">BIG3 のための筋トレ記録アプリ。ジムで迷う時間をなくすために作りました。</p>
+    <a class="cta soon" href="#features">App Store で近日公開</a>
+  </header>
+
+  <section id="features">
+    <h2>できること</h2>
+
+    <div class="feature">
+      <b>次の重量が決まる</b>
+      <span>前回の記録から、次のセットで挙げる重量を提案します。目標のレップを全セットこなせたら上げ、続けて届かなければ落とす。この判断をアプリが引き受けます。</span>
+    </div>
+    <div class="feature">
+      <b>記録はタップだけ</b>
+      <span>重量とレップをタップして「完了」。達成か未達かはレップ数から自動で判定します。セットごとにメモと RPE も残せます。</span>
+    </div>
+    <div class="feature">
+      <b>休憩タイマー</b>
+      <span>記録すると自動で始まります。アプリを閉じていても、画面を消していても通知で鳴ります。音楽は止めません。</span>
+    </div>
+    <div class="feature">
+      <b>BIG3 の伸びが一本の線で見える</b>
+      <span>合計の推移、種目ごとの自己ベスト、RM表、目標までの距離。体重比から BIG3 のレベルも判定します。</span>
+    </div>
+    <div class="feature">
+      <b>メニューは曜日でも、特別な日でも</b>
+      <span>曜日ごとのメニューに加えて、トップシングルやデロード週のような曜日に紐づかないメニューも作れます。</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>画面</h2>
+    <div class="shots">
+      <figure>
+        <img src="./img/home.png" alt="ホーム画面。カレンダーに記録した日が並び、その日のセット数とボリュームが見える">
+        <figcaption>続けた記録が、すべて残る</figcaption>
+      </figure>
+      <figure>
+        <img src="./img/analysis.png" alt="分析画面。BIG3 合計と推移のグラフ、最近の自己ベスト">
+        <figcaption>BIG3 の伸びが、一本の線で</figcaption>
+      </figure>
+      <figure>
+        <img src="./img/menu.png" alt="メニュー画面。曜日ごとの種目と、週の部位別セット数">
+        <figcaption>週の組み立てが、ひと目で</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>このアプリがしないこと</h2>
+    <ul>
+      <li>記録画面に広告を出しません</li>
+      <li>アカウント登録は不要です</li>
+      <li>記録は端末の中だけで扱います。外部のサーバーには送りません</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="price">
+      <h3>無料で使えます</h3>
+      <p>記録・提案・タイマー・メニューはすべて無料。分析も無料で直近1か月ぶん見られます。</p>
+      <h3>Plustra Pro ― 買い切り ¥500</h3>
+      <p>3か月・6か月・1年・全期間の推移、期間の自由な指定、種目ごとの全履歴、週に一度の自動バックアップ。追加の支払いはありません。</p>
+    </div>
+  </section>
 
   <footer>
     <p>
@@ -38,6 +137,7 @@
       <a href="mailto:tougen.jin@gmail.com">お問い合わせ</a>
     </p>
   </footer>
-</main>
+
+</div>
 </body>
 </html>
