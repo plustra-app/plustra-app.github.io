@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>はじめかた — Plustra</title>
+<meta name="description" content="Plustra の最初の設定。プロフィール、種目、曜日メニューを決めると、あとは記録タブを開くだけになります。">
+<meta property="og:title" content="Plustra のはじめかた">
+<meta property="og:description" content="最初の5分でやっておくと、あとが楽になること。">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0c10;
+    --surface: #14171d;
+    --text: #f2f4f6;
+    --muted: #9aa0a6;
+    --accent: #d2ff3b;
+    --accent-ink: #0b0d06;
+    --border: #262b33;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 42rem; margin: 0 auto; padding: 0 20px; }
+  header { padding: 56px 0 8px; }
+  .back { color: var(--muted); text-decoration: none; font-size: .9rem; }
+  .mark { font-size: 1.6rem; font-weight: 800; margin: 24px 0 0; }
+  .mark span { color: var(--accent); }
+  h1 { font-size: 2rem; line-height: 1.45; margin: 12px 0 10px; letter-spacing: .01em; }
+  .lead { color: var(--muted); margin: 0; }
+
+  .step { padding: 40px 0; border-top: 1px solid var(--border); }
+  .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; border-radius: 999px;
+    background: var(--accent); color: var(--accent-ink);
+    font-weight: 800; font-size: .95rem; line-height: 1;
+  }
+  .step h2 { font-size: 1.35rem; margin: 14px 0 2px; line-height: 1.5; }
+  .where { color: var(--accent); font-size: .9rem; margin: 0 0 14px; font-weight: 600; }
+  .step p { margin: 0 0 14px; }
+  .step p.note { color: var(--muted); font-size: .92rem; }
+  .skip { color: var(--muted); font-size: .9rem; margin: 0; }
+
+  figure { margin: 22px 0 0; }
+  figure img {
+    width: 100%; max-width: 280px; display: block; margin: 0 auto;
+    border-radius: 18px; border: 1px solid var(--border);
+  }
+  figcaption { color: var(--muted); font-size: .85rem; margin-top: 10px; text-align: center; }
+
+  .box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; }
+  .box h3 { margin: 0 0 8px; font-size: 1.05rem; }
+  .box p { margin: 0; color: var(--muted); font-size: .95rem; }
+  ul { padding-left: 1.3em; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  b { color: var(--text); }
+  a { color: var(--accent); }
+  footer { padding: 44px 0 72px; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+  @media (max-width: 480px) { h1 { font-size: 1.6rem; } .step h2 { font-size: 1.2rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="back" href="./">← Plustra</a>
+    <p class="mark">Plustra<span>+</span></p>
+    <h1>はじめかた</h1>
+    <p class="lead">最初の5分でやっておくと、あとがずっと楽になることが3つあります。順番にどうぞ。</p>
+  </header>
+
+  <section class="step">
+    <span class="num">1</span>
+    <h2>プロフィールを入れる</h2>
+    <p class="where">設定 → プロフィール</p>
+    <p>性別・体重・身長と、トレーニングを始めた時期を入れます。</p>
+    <ul>
+      <li>体重を入れると、分析に <b>BIG3 の体重比レベル</b>が出ます（strengthlevel.com の目安）</li>
+      <li>始めた時期を入れると、ホームに<b>トレーニング歴</b>が出ます</li>
+      <li>種目ごとの<b>目標重量</b>も、ここで決めておくと分析に「目標まであと◯kg」が出ます</li>
+    </ul>
+    <p class="note">体重は後から変えられます。入れなくてもアプリは普通に使えますが、分析の面白い部分が出てきません。</p>
+  </section>
+
+  <section class="step">
+    <span class="num">2</span>
+    <h2>自分の種目をそろえる</h2>
+    <p class="where">設定 → 種目の追加・編集</p>
+    <p>最初はベンチプレス・スクワット・デッドリフトの3つだけ入っています。<b>「＋ 種目を追加」から、よく使う種目を足してください。</b>46種目のプリセットがあるので、名前を選ぶだけで入ります。</p>
+    <p>種目ごとに、こう決められます。</p>
+    <ul>
+      <li><b>重量の刻み</b>（2.5kg・5kg・ダンベルなら2kg など）</li>
+      <li><b>目標レップ数と目標セット数</b>（この回数を全セットこなしたら重量が上がります）</li>
+      <li><b>伸ばし幅</b>（上がるときに何kg足すか）</li>
+      <li><b>何回外したらデロードを提案するか</b></li>
+    </ul>
+    <p class="note">ここがこのアプリの肝です。「5回×3セットできたら +2.5kg」のような進め方を種目ごとに決めておくと、あとはアプリが次の重量を出し続けます。</p>
+    <figure>
+      <img src="./img/chooser.png" alt="種目を選ぶ画面。プリセットの種目が部位ごとに並んでいる">
+      <figcaption>プリセットから選ぶだけで足せます</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <span class="num">3</span>
+    <h2>曜日ごとのメニューを決める</h2>
+    <p class="where">設定 → メニュー</p>
+    <p>月曜は胸、火曜は脚、というふうに曜日ごとの内容を決めておきます。<b>決めてしまえば、その日は記録タブを開くだけ</b>で、やる種目が順番に並びます。</p>
+    <ul>
+      <li>曜日メニューごとに、セット数とレップ数を上書きできます（種目の既定値は変わりません）</li>
+      <li>種目はドラッグで並べ替えられます</li>
+      <li>決めていない曜日は休養日になります。その日だけ別のメニューを選ぶこともできます</li>
+    </ul>
+    <figure>
+      <img src="./img/menu.png" alt="メニュー画面。曜日ごとの種目と、週の部位別セット数が並んでいる">
+      <figcaption>週の部位別セット数も、ここで見えます</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <h2>あとは記録するだけ</h2>
+    <p>記録タブを開くと、その日の種目が並び、<b>次に挙げる重量がすでに入力欄に入っています</b>。重さと回数を確かめて「完了」を押すだけです。</p>
+    <ul>
+      <li>目標のレップを全セットこなせたら、次回は自動で重量が上がります</li>
+      <li>続けて届かなければ、アプリから<b>デロード（一時的に軽くする）</b>を提案します</li>
+      <li>「完了」で<b>休憩タイマー</b>が自動で始まります。画面を消していても通知で鳴り、音楽は止まりません</li>
+      <li>数値をタップすれば修正、長押しで取り消しです</li>
+    </ul>
+    <figure>
+      <img src="./img/record.png" alt="記録画面。次に挙げる重量が入力欄に入っていて、休憩タイマーが動いている">
+      <figcaption>重量はアプリが決めます</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <h2>記録を守る</h2>
+    <p class="where">設定 → データのバックアップ</p>
+    <p><b>記録はこの端末の中だけにあります。</b>サーバーには送っていません。安全ですが、端末を無くすと記録も一緒に無くなります。</p>
+    <p>ときどき「書き出す（共有）」で<b>ファイルに書き出して、iCloud Drive に置いておいてください。</b>機種変更のときは、そのファイルを読み込むだけで全部戻ります。</p>
+    <p class="note">アプリを入れ直すと、記録は消えます。入れ直す前には必ず書き出してください。</p>
+  </section>
+
+  <section class="step">
+    <h2>よくある質問</h2>
+    <div class="box" style="margin-bottom:14px">
+      <h3>記録はどこまで無料ですか</h3>
+      <p>記録・次の重量の提案・休憩タイマー・メニュー・自己ベスト・5×5の重量表は、ずっと無料です。回数の制限もありません。</p>
+    </div>
+    <div class="box" style="margin-bottom:14px">
+      <h3>Plustra Pro（¥500 買い切り）で何が変わりますか</h3>
+      <p>5×5 プログラム、長い期間の分析、期間の自由な指定、グラフのピンチ操作、週1回の自動バックアップです。月額ではなく1回きりの購入で、ファミリー共有にも対応しています。</p>
+    </div>
+    <div class="box">
+      <h3>広告は出ますか</h3>
+      <p>記録画面には出しません。セットの合間に広告が出るアプリでトレーニングしたくないので、そう決めています。</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>うまくいかないことがあれば、<a href="https://x.com/Shinpe_eei">@Shinpe_eei</a> まで教えてください。</p>
+    <p><a href="./privacy.html">プライバシーポリシー</a> ・ <a href="./terms.html">利用規約</a> ・ <a href="./">Plustra について</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
