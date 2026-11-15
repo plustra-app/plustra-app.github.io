@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>更新のお知らせ — Plustra</title>
+<meta name="description" content="Plustra の更新内容。代替種目をワンタップで差し替えられるようになりました。曜日メニューの検索、5×5 の表、表示の修正など。">
+<meta property="og:title" content="Plustra 更新のお知らせ">
+<meta property="og:description" content="代替種目をワンタップで差し替えられるようになりました。">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0c10;
+    --surface: #14171d;
+    --text: #f2f4f6;
+    --muted: #9aa0a6;
+    --accent: #d2ff3b;
+    --accent-ink: #0b0d06;
+    --border: #262b33;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 20px; }
+  header { padding: 56px 0 28px; }
+  .back { color: var(--muted); text-decoration: none; font-size: .9rem; }
+  .back:hover { color: var(--accent); }
+  h1 { font-size: 1.7rem; line-height: 1.5; margin: 18px 0 6px; }
+  .date { color: var(--muted); font-size: .9rem; margin: 0; }
+  .note { color: var(--muted); font-size: .95rem; margin: 18px 0 0; }
+  section { padding: 36px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.2rem; margin: 0 0 6px; }
+  h2 .new { color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .1em;
+            border: 1px solid var(--accent); border-radius: 999px; padding: 2px 8px;
+            margin-left: 10px; vertical-align: 3px; }
+  h3 { font-size: 1.02rem; margin: 28px 0 4px; }
+  p { margin: 0 0 14px; }
+  p.sub { color: var(--muted); font-size: .95rem; }
+  figure { margin: 22px 0; }
+  figure img { width: 100%; max-width: 393px; display: block; border-radius: 14px;
+               border: 1px solid var(--border); }
+  figcaption { color: var(--muted); font-size: .85rem; margin-top: 8px; }
+  ul { padding-left: 1.2em; margin: 0 0 14px; }
+  li { color: var(--muted); margin-bottom: 6px; }
+  li b { color: var(--text); font-weight: 700; }
+  .box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+         padding: 18px 20px; }
+  .box p:last-child { margin-bottom: 0; }
+  footer { padding: 36px 0 64px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); }
+  a { color: var(--accent); }
+  @media (max-width: 480px) { h1 { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="back" href="./index.html">← Plustra</a>
+    <h1>代替種目を、その日だけワンタップで差し替えられるようになりました</h1>
+    <p class="date">2026年11月15日の更新</p>
+    <p class="note">アプリを開き直すと入ります。App Store からの更新は要りません。</p>
+  </header>
+
+  <section>
+    <h2>代替種目<span class="new">NEW</span></h2>
+    <p>マシンが埋まっている日、いつもと違うジムに行った日。これまでは「予定から外す」か「種目を足す」しかなく、どちらをしてもその日の予定が崩れて、部位ごとのセット数も消化率もずれていました。</p>
+    <p>種目ごとに代替を登録しておくと、記録タブのカードの <b>⋯</b> から「代替に差し替える（この日だけ）」で入れ替えられます。</p>
+
+    <figure>
+      <img src="./img/update-alt-sheet.png" alt="ベンチプレスを差し替えるシート。ダンベルベンチプレスとインクラインベンチプレスが並んでいる" width="393">
+      <figcaption>登録してある代替だけが並びます。選ぶとその日の予定の行が入れ替わります。</figcaption>
+    </figure>
+
+    <h3>引き継ぐのはセット数とレップ数だけ</h3>
+    <p>重量は引き継ぎません。差し替えた種目の記録から、いつもどおり提案します。</p>
+    <p class="sub">ベンチプレス 85kg の日にダンベルベンチへ差し替えると、85kg ではなく、ダンベルベンチ自身の記録から出した重量になります。重量を引き継ぐと、挙がらない重量を提案することになり、その記録が残ってその後の提案まで狂うためです。</p>
+
+    <figure>
+      <img src="./img/update-alt-card.png" alt="差し替えたあとのカード。ダンベルベンチプレス、ベンチプレスから差し替え、32.5kg × 5" width="393">
+      <figcaption>「ベンチプレスから差し替え」と出るので、あとで見返したときに分かります。</figcaption>
+    </figure>
+
+    <h3>決まりごと</h3>
+    <ul>
+      <li><b>その日だけ</b>です。曜日メニューも種目の設定も変わりません。</li>
+      <li><b>代替はお互いに登録されます。</b>ベンチに「ダンベルベンチ」を足すと、ダンベルベンチ側にも「ベンチプレス」が入ります。戻すときも同じ手順です。</li>
+      <li>1種目につき5つまで。</li>
+      <li>その日にもう記録がある種目と、5×5 が走っている種目は差し替えられません（理由が出ます）。</li>
+    </ul>
+    <div class="box">
+      <p><b>登録のしかた</b></p>
+      <p class="sub" style="margin:0">メニュータブ → 種目 → 種目を選ぶ → 「代替種目」の「＋ 代替を足す」。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>そのほかの追加</h2>
+    <ul>
+      <li><b>曜日メニューの「種目を足す」に検索と部位の絞り込み</b>を付けました。種目が増えてくると探すのが大変だったところです。種目を選ぶ画面4つとも、同じ形にそろえました。</li>
+      <li><b>5×5 のサイクル表が、記録タブからワンタップで開きます。</b>「いま何日目か」がその場で分かります。</li>
+      <li><b>「アプリを教える」をマイページの見出しに出しました。</b>共有する文に App Store のリンクを入れるかどうかは、設定で選べます。</li>
+      <li><b>朝の知らせに「今日は6種目27セット」</b>が入るようになりました。</li>
+      <li><b>同じタブをもう一度押すと、いちばん上まで戻ります。</b></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>直したところ</h2>
+    <ul>
+      <li><b>今週の進捗</b>が、予定より多くこなした分を切り捨てていました。予定を超えた日は「＋4 セット」と出ます。</li>
+      <li><b>BIG3 合計がマイページと分析タブで違って見える</b>件に、両方の画面で説明を出しました。マイページの段は<b>アプリで記録した重量だけ</b>で判定しています（プロフィールの自己申告は含みません）。分析タブの合計は申告を含んだ数字です。</li>
+      <li>休みの日の「40kg が待っています」が、<b>何の 40kg か</b>言っていませんでした。種目名を出すようにしました。</li>
+      <li>メニュータブのアプリ名だけ、iOS 26 の灰色の囲いの中に入っていました。</li>
+      <li>バッジ一覧の戻るボタンに、内部の名前がそのまま出ていました。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="wrap" style="padding:0">
+      <a href="./index.html">Plustra について</a> ・
+      <a href="./start.html">使い方</a> ・
+      <a href="./privacy.html">プライバシーポリシー</a> ・
+      <a href="./terms.html">利用規約</a> ・
+      <a href="mailto:plustra.official@gmail.com">お問い合わせ</a>
+      <p>記録画面に広告は出しません。</p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
